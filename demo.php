@@ -8,7 +8,8 @@ $mongo_exercise = $client->mongo_exercise;
 
 $movies = $mongo_exercise->escuela;
 
-$document = $movies->find();
+$document = $movies->find(
+);
 
 echo json_encode(iterator_to_array($document));
 /*

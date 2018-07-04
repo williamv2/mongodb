@@ -12,7 +12,7 @@
 
     <script src="controlador.js"></script>
 
-    <title>Prueba Mongo!</title>
+    <title>Proyecto Jugadores Mongo!</title>
   </head>
   <body>
   	<div class="container">
@@ -22,7 +22,7 @@
   		</div>
   		<div class="col-sm-8">
         <br>
-  			<div class="container"><h1>Prueba Mongo!</h1></div>
+  			<div class="container"><h1>Proyecto Jugadores Mongo!</h1></div>
   		</div>
   	</div>	
     
@@ -108,6 +108,35 @@
                   <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-success">Actualizar</button>
+              </div>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+                      <!-- Modal -->
+        <div class="modal fade" id="myModaldelet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Desea Eliminar Jugador?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="eliminarjug.php">
+                  <div class="form-group">
+                        <strong style="color: red;">
+                              Vas a eliminar a {{clickjug.nombres}} {{clickjug.apellidos}}.
+                        </strong>
+                        <input type="text" class="form-control" id="mnombre" name="mnombre" required="true" ng-model="clickjug.nombres" style="display:none; ">
+                  </div>
+                  <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
               </div>
                 </form>
               </div>
