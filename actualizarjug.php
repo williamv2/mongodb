@@ -7,6 +7,7 @@ $client = new MongoDB\Client;
 $mongo_exercise = $client->mongo_exercise;
 
 $escuela = $mongo_exercise->escuela;
+$padres = $mongo_exercise->padres;
 
 	$nombres = $_POST['mnombre'];
 	$apellidos = $_POST['mapellido'];

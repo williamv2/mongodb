@@ -21,3 +21,25 @@ var datos = angular.module('mongodb',[]);
 			$scope.clickjug = jug;
 		}
 	})
+
+	datos.controller('controladorpadre', function ($scope, $http) {
+		
+		$scope.importarpadres =function () {
+			
+			$http.get('listarpadres.php').then(function(datos){
+
+				$scope.padres = datos.data;
+
+				console.log(datos);
+			})
+		}
+
+		$scope.importarpadres();
+
+		$scope.selectpadres = function(pad){
+
+			console.log(pad);
+
+			$scope.clickpad = pad;
+		}
+	})
