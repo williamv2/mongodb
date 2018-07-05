@@ -19,11 +19,11 @@ $document= $escuela->deleteOne(
 
 );
 
-$document2= $padres->deleteOne(
+/*$document2= $padres->deleteOne(
 
 ['padres' => [$madre,$padre]]
 
-);
+);*/
 
 
 header('location:index.php');

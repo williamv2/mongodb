@@ -24,9 +24,9 @@ $padres = $mongo_exercise->padres;
 $document = $escuela->insertOne(
 	['nombres' => $nombres, 'apellidos' => $apellidos, 'fechanaci' => $fnaci, 'numcel' => $cel, 'ciudad' => $ciudad, 'pais' => $pais, 'padres' => [$madre,$padre], 'fechaing' => $fing, 'peso' => $peso, 'estatura' => $estatura]
 );
-$document2 = $padres->insertOne(
+/*$document2 = $padres->insertOne(
 	[ 'padres' => [$madre,$padre]]
-);
+);*/
 
 header('location:index.php');
 /*

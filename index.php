@@ -95,14 +95,24 @@
                         <input type="text" class="form-control" id="mpais" name="mpais" required="true" ng-model="clickjug.pais">
                         <br>
                         <label>Padres:</label>
-                        <div class="row">
-                          <div class="col">
-                            <input type="text" class="form-control input-group" id="mmadre" name="mmadre" placeholder="Madre" ng-model="clickjug.padres[0]">
-                          </div>
-                          <div class="col">
-                            <input type="text" class="form-control input-group" id="mpadre" name="mpadre" placeholder="Padre" ng-model="clickjug.padres[1]">
-                          </div>
+                        <div class="input-group" ng-controller="controladorpadre">
+                          <select name="mpadres" id="mpadres" class="form-control">
+                            
+                            <option ng-repeat="pad in padres" value="{{pad.padres[0]}},{{pad.padres[1]}}">{{pad.padres[0]}},{{pad.padres[1]}}</option>
+                          </select>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-success" ng-click="selectpadres(pad)">Cargar</button>
                         </div>
+                        
+                        <!--<div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control input-group" id="mmadre" name="mmadre" placeholder="Madre" ng-model="clickpad.padres[0]">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control input-group" id="mpadre" name="mpadre" placeholder="Padre" ng-model="clickpad.padres[1]">
+                          </div>
+                        </div>-->
+                      </div>
                         <br>
                         <label>Fecha de ingreso:</label>
                         <input type="text" class="form-control" id="mfing" name="mfing" required="true" ng-model="clickjug.fechaing">

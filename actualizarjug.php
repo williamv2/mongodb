@@ -15,17 +15,21 @@ $padres = $mongo_exercise->padres;
 	$cel = $_POST['mcel'];
 	$ciudad = $_POST['mcity'];
 	$pais = $_POST['mpais'];
-	$madre = $_POST['mmadre'];
-	$padre = $_POST['mpadre'];
+	//$madre = $_POST['mmadre'];
+	//$padre = $_POST['mpadre'];
 	$fing = $_POST['mfing'];
 	$peso = $_POST['mpeso'];
 	$estatura = $_POST['mestatura'];
+
+	$mpad = $_POST['mpadres'];
+
+	$mpadres = explode(",", $mpad);
 
 $document= $escuela->updateOne(
 
 ['nombres' => $nombres],
 
-[ '$set' => ['nombres' => $nombres, 'apellidos' => $apellidos, 'fechanaci' => $fnaci, 'numcel' => $cel, 'ciudad' => $ciudad, 'pais' => $pais, 'padres' => [$madre,$padre], 'fechaing' => $fing, 'peso' => $peso, 'estatura' => $estatura]]
+[ '$set' => ['nombres' => $nombres, 'apellidos' => $apellidos, 'fechanaci' => $fnaci, 'numcel' => $cel, 'ciudad' => $ciudad, 'pais' => $pais, 'padres' => [$mpadres[0],$mpadres[1]], 'fechaing' => $fing, 'peso' => $peso, 'estatura' => $estatura]]
 
 );
 
